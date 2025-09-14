@@ -3,6 +3,7 @@
 import { Button } from "../components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -34,12 +35,12 @@ export function Hero() {
 
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8">
             At 26, I decided to transform my career and follow my passion for
-            web development. Now, as a Web Development student, I’m eager to
-            learn new technologies, create meaningful digital experiences, and
-            bring ideas to life through code and creativity.
+            web development. Now, as a Web Development student, I&apos;m eager
+            to learn new technologies, create meaningful digital experiences,
+            and bring ideas to life through code and creativity.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-row justify-center md:justify-start items-center gap-4 mb-8">
             <Button
               onClick={scrollToProjects}
               size="lg"
@@ -48,11 +49,10 @@ export function Hero() {
               View My Work
             </Button>
 
-            {/* Botão para baixar currículo */}
             <a href="/curriculo.pdf" download>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-purple-400 to-purple-600  cursor-pointer"
+                className="bg-gradient-to-r from-purple-400 to-purple-600 cursor-pointer"
               >
                 Download CV
                 <ArrowDown className="ml-2 h-4 w-4" />
@@ -91,11 +91,12 @@ export function Hero() {
 
         {/* LADO IMAGEM */}
         <div className="flex justify-center md:justify-end">
-            <img
-                src="/images/hero.png"
-                alt="Hero Image"
-                className=""
-            />
+          <Image
+            src="/images/hero.png"
+            alt="Hero Image"
+            width={600}
+            height={600}
+          />
         </div>
       </div>
     </section>

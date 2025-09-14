@@ -64,7 +64,7 @@ export function Projects() {
           
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            A collection of web applications and websites I've built, showcasing
+            A collection of web applications and websites I&apos;ve built, showcasing
             my skills in modern web development.
           </p>
         </div>

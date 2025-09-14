@@ -25,16 +25,16 @@ export function Contact() {
             </span>
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life.
+            Ready to collaborate on your next project? Let&apos;s discuss how we can bring your ideas to life.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-8">
-                I'm always excited to work on new projects and collaborate with fellow developers and businesses.
+                I&apos;m always excited to work on new projects and collaborate with fellow developers and businesses.
                 Whether you have a project in mind or just want to say hello, feel free to reach out!
               </p>
             </div>
@@ -90,7 +90,7 @@ export function Contact() {
             <CardHeader className="p-0 mb-6">
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you as soon as possible.
+                Fill out the form below and I&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0">
