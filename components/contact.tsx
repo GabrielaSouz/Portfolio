@@ -100,7 +100,7 @@ export function Contact() {
                 className="space-y-6"
               >
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://seusite.com/obrigado" />
+                <input type="hidden" name="_next" value="https://gabidesouza.com/obrigado" />
 
                 <div>
                   <Input name="name" placeholder="Your Name" required />

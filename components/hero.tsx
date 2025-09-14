@@ -27,7 +27,7 @@ export function Hero() {
         {/* LADO TEXTO */}
         <div className="text-center md:text-left animate-fade-in-up">
           <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-4">
-            Hello, I'm
+            Hello, I&apos;m
           </p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="text-violet-800">Gabriela de Souza</span>
