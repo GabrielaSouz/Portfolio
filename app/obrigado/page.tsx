@@ -1,5 +1,4 @@
-// pages/obrigado.jsx
-
+// app/obrigado/page.tsx
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 
