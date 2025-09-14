@@ -1,15 +1,60 @@
 "use client"
 
-import type React from "react"
-
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 
-
 export function Contact() {
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/souza.gab@hotmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      })
+      
+      const data = await response.json()
+      if (data.success === 'true') {
+        router.push('/obrigado')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
   
 
 
@@ -94,29 +139,43 @@ export function Contact() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0">
-              <form
-                action="https://formsubmit.co/souza.gab@hotmail.com"
-                method="POST"
-                className="space-y-6"
-              >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://gabidesouza.com/obrigado" />
-
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Input name="name" placeholder="Your Name" required />
+                  <Input 
+                    name="name" 
+                    placeholder="Your Name" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <div>
-                  <Input type="email" name="email" placeholder="Your Email" required />
+                  <Input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Your Email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <div>
-                  <Textarea name="message" placeholder="Your Message" rows={5} required />
+                  <Textarea 
+                    name="message" 
+                    placeholder="Your Message" 
+                    rows={5} 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-400 to-purple-600  cursor-pointer"
+                  className="w-full bg-gradient-to-r from-purple-400 to-purple-600 cursor-pointer"
+                  disabled={isSubmitting}
                 >
                   <Send className="mr-2 h-4 w-4" />
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>
