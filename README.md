@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gabi de Souza - Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, showcasing my work as a Front-End Developer.
 
-First, run the development server:
+![Portfolio Preview](/social.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React & React Icons
+- **Fonts**: Inter & Playfair Display (Google Fonts)
+- **Email Service**: Resend
+
+## ✨ Features
+
+- **Responsive Design**: Optimized for all screen sizes
+- **Modern UI**: Clean, elegant interface with smooth animations
+- **Project Showcase**: Interactive project cards with links to live sites
+- **Contact Form**: Functional form with email integration
+- **Dark Mode Ready**: Color system supporting light/dark themes
+- **SEO Optimized**: Proper meta tags and semantic HTML
+
+## 📁 Project Structure
+
+```
+meu-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── api/contact/     # Contact form API route
+│   │   ├── globals.css      # Global styles
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Main portfolio page
+│   └── components/
+│       └── ui/              # Reusable UI components
+├── public/
+│   ├── images/             # Project images
+│   └── social.png          # Social media preview image
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+```bash
+git clone https://github.com/GabrielaSouz/Portfolio.git
+cd Portfolio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Learn More
+3. Set up environment variables:
+Create a `.env.local` file with:
+```
+RESEND_API_KEY=your_resend_api_key
+DESTINATION_EMAIL=your_email@example.com
+FROM_EMAIL=noreply@yourdomain.com
+FROM_NAME=Gabi de Souza
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Build for Production
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is deployed on Vercel. To deploy your own:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new?utm_source=portfolio-template&utm_medium=repository)
+
+## 📧 Contact
+
+- **Email**: souza.gab@hotmail.com
+- **GitHub**: [GabrielaSouz](https://github.com/GabrielaSouz)
+- **LinkedIn**: [Gabriela de Souza](https://www.linkedin.com/in/gabriela-de-souza-0a6847161/)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+Built with ❤️ by Gabi de Souza
