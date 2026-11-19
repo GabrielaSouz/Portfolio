@@ -42,7 +42,7 @@ const projects = [
     category: "SERVICE WEBSITE",
     description:
       "A responsive website designed to communicate services, build trust and make contact easier for potential clients.",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind CSS", "Lucide-React"],
     type: "CLIENT PROJECT",
     theme: "bg-[#DDECE7]",
     accent: "text-[#064F4B]",
@@ -57,7 +57,7 @@ const projects = [
     category: "BUSINESS WEBSITE",
     description:
       "A website for an Italian food brand, showcasing products and brand story with an elegant design.",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
+    technologies: ["Next-Auth", "React", "MongoDB"],
     type: "CLIENT PROJECT",
     theme: "bg-[#E4DDF2]",
     accent: "text-[#69558E]",
@@ -87,7 +87,7 @@ const projects = [
     category: "WEB APPLICATION",
     description:
       "A study project creating an interactive menu interface, exploring modern UI patterns and component design.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["React", "TypeScript", "Supabase"],
     type: "STUDY PROJECT",
     theme: "bg-[#E9DFE9]",
     accent: "text-[#775D78]",
