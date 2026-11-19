@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js, showcasing my work as a Front-End Developer.
 
-![Portfolio Preview](/social.png)
+![Portfolio Preview](./public/social.png)
 
 ## 🚀 Tech Stack
 

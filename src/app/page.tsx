@@ -794,12 +794,12 @@ export default function Portfolio() {
                           PHONE / WHATSAPP
                         </p>
                         <a
-                          href="https://wa.me/5519997543444"
+                          href="https://wa.me/5519997544434"
                           target="_blank"
                           rel="noreferrer"
                           className="mt-2 block text-sm font-medium hover:text-[#8875B2]"
                         >
-                          +55 (19) 99754-3444
+                          +55 (19) 99754-4434
                         </a>
                       </div>
                     </div>
