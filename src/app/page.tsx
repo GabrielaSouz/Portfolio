@@ -207,10 +207,10 @@ export default function Portfolio() {
     const formData = new FormData(form);
 
     const dados = {
-      nome: formData.get("name"),
+      name: formData.get("name"),
       email: formData.get("email"),
       whatsapp: formData.get("whatsapp"),
-      mensagem: formData.get("message"),
+      message: formData.get("message"),
     };
 
     console.log("Enviando dados:", dados);
@@ -218,7 +218,10 @@ export default function Portfolio() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
       });
 
       if (response.ok) {
